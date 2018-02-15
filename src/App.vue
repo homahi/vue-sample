@@ -1,5 +1,6 @@
 <template>
   <div>
+    <myheader></myheader>
     <p v-if="msg.length > 0">{{msg}}</p>
     <p v-else>no text</p>
     <input type="text" v-model="msg">
@@ -8,7 +9,12 @@
 </template>
 
 <script type="text/javascript">
+import myheader from './components/myheader'
+
 export default {
+  components: {
+    myheader
+  },
   data () {
     return {
       msg: 'Hello World!'
